@@ -1,0 +1,11 @@
+IssueType,Requirement ,Summary,Prerequisites,Description,TestSteps,ExpectedResult,Assignee,Priority
+Test Case,REQ 1,TC_01 - Multiples of 4,NA,Insert multiple comma seperated numeric values in the text box which are multiples of 4,"1. Insert 4, 8 and 12 in the first text box.","3 multiples found,",ianche,P1
+Test Case,REQ 1,TC_02 - Multiples of 6,NA,Insert multiple comma seperated numeric values in the text box which are multiples of 6,"1. Insert 6, 12 and 18 in the first text box.","3 multiples found,",ianche,P1
+Test Case,REQ 1,TC_03 - Multiples of 4 and 6,NA,Insert multiple comma seperated numeric values in the text box which are multiples of both 4 and 6,"1. Insert 4, 6, 8, 12 and 18 in the first text box.","5 multiples found,",ianche,P1
+Test Case,REQ 1,TC_04 - Multiple mixtures,NA,Insert multiple comma seperated numeric values in the text box which may or may not be multiples of either 4 or 6,"1. Insert 1, 6, 8, 12 and 18 in the first text box.","4 multiples found,",ianche,P1
+Test Case,REQ 1,TC_05 - Non-numeric characters,NA,"Insert alphanumeric,special characters or datatypes other than integers","1. Insert 1, 4, ,foobar, 6, 8, 1.2","3 multiples found, no errors",ianche,P1
+Test Case,REQ 1,TC_06 - Whitespace in textbox,NA,Insert a whitespace to ensure function does not throw an exception,Insert a space (blank),"0 multiples found, no errors",ianche,P1
+Test Case,REQ 1,TC_07 - Negative integers,NA,Insert a negative to ensure function does not throw an exception or it is not counted as a multiple of either 4 or 6,"1. Insert -4, 4, 6","2 multiples found, no errors",ianche,P1
+Test Case,REQ 2,TC_08 - Palindrome string,NA,Insert a palindrome string. The function should identify if it is indeed the same forwards to backwards.,"1. Insert words like civic, bob, tit ",String is a palindrome,ianche,P1
+Test Case,REQ 2,TC_09 - Regular string,NA,Insert a regular non-palindrome  string. The function should not identify it as a palindrome,"1. Insert words like hello,world",String is not a palindrome,ianche,P1
+Bug,REQ 1,Extra comma after last found multiple,N/A,"When a list of multiples of 4 or 6 are shown, the last instance also contains a comma, which looks bad, e.g. (4, 8, 12,)","1. Insert 4, 8 and 12","4, 8, 12",ianche,P1
